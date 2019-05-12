@@ -1,13 +1,10 @@
 import React from 'react';
 
 /* components */
-import Modal from '../components/modal';
-import Button from "@material-ui/core/Button";
+import Header from '../components/header';
 
 const Platform = (props) => {
-  return(
-  	<div>Platform</div>
-  );
+  return <Header></Header>;
 }
 
 export default Platform;
