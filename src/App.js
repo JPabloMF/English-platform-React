@@ -5,7 +5,7 @@ import "./App.css";
 
 import Dashboard from "./dashboard";
 import Platform from "./platform";
-import PageNotFound from "./shared/pageNotFound";
+import PageNotFound from "./components/pageNotFound";
 
 function App() {
   return (
