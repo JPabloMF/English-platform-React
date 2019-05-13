@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from "react";
 
 /* components */
-import Header from '../components/header';
+import Header from "../components/header";
+import Sidenav from "../components/sidenav";
 
 const Platform = (props) => {
-  return <Header></Header>;
-}
+  const [openSidenav, setOpenSidenav] = useState(false);
+
+  return (
+    <>
+      <Header openSidenav={openSidenav} setOpenSidenav={setOpenSidenav} />
+      <Sidenav openSidenav={openSidenav} setOpenSidenav={setOpenSidenav} />
+    </>
+  );
+};
 
 export default Platform;
