@@ -1,10 +1,18 @@
 import React from "react";
-import HomeIcon from "@material-ui/icons/Home";
-import ListIcon from "@material-ui/icons/List";
-import DashboardIcon from "@material-ui/icons/Dashboard";
+import {
+  Home,
+  Book,
+  List,
+  Dashboard,
+  VideoLibrary,
+  Gamepad
+} from "@material-ui/icons";
 
 export const SIDENAV_DATA = [
-  { text: "Home", IconComponent: <HomeIcon/> },
-  { text: "Topics", IconComponent: <ListIcon/> },
-  { text: "Dashboard", IconComponent: <DashboardIcon/> }
+  { text: "Home", IconComponent: <Home /> },
+  { text: "Words", IconComponent: <List /> },
+  { text: "Topics", IconComponent: <Book /> },
+  { text: "Exams", IconComponent: <Dashboard /> },
+  { text: "Video Courses", IconComponent: <VideoLibrary /> },
+  { text: "Game", IconComponent: <Gamepad /> }
 ];
