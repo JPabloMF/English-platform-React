@@ -70,14 +70,15 @@ const styles = (theme) => ({
   }
 });
 
-function SearchAppBar(props) {
-  const { classes } = props;
+const Header = props => {
+  const { classes, openSidenav, setOpenSidenav } = props;
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
           <IconButton
             className={classes.menuButton}
+            onClick={() => setOpenSidenav(!openSidenav)}
             color="inherit"
             aria-label="Open drawer"
           >
@@ -110,8 +111,10 @@ function SearchAppBar(props) {
   );
 }
 
-SearchAppBar.propTypes = {
-  classes: PropTypes.object.isRequired
+Header.propTypes = {
+  classes: PropTypes.object.isRequired,
+  openSidenav: PropTypes.bool.isRequired,
+  setOpenSidenav: PropTypes.func.isRequired
 };
 
-export default withStyles(styles)(SearchAppBar);
+export default withStyles(styles)(Header);
