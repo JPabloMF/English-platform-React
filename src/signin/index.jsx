@@ -7,23 +7,27 @@ import { Link } from "react-router-dom";
 // components
 import SignInForm from "./form";
 
-//styled components
-
 const SignIn = ({ values, errors, handleChange, handleSubmit }) => {
   return (
-    <>
-      <SignInForm
-        values={values}
-        errors={errors}
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
-      />
-      <p>
-        Don't have an account?<Link to="/Dashboard">Sign Up</Link>
-      </p>
-      <Link to="/Dashboard">Forgot your Password?</Link>
-      <Link to="/Platform">Provisional entry to platform</Link>
-    </>
+    <div className="signin-container">
+      <div className="signin-form">
+        <SignInForm
+          values={values}
+          errors={errors}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+        />
+        <p>
+          Don't have an account?<Link to="/Dashboard">Sign Up</Link>
+        </p>
+        <Link to="/Dashboard">Forgot your Password?</Link>
+        <Link to="/Platform">Provisional entry to platform</Link>
+      </div>
+      <div className="singin-right">
+        <p>ENGLISH PLATFORM</p>
+        <p>Improve your future</p>
+      </div>
+    </div>
   );
 };
 
