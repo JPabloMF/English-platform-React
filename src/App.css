@@ -1,8 +1,11 @@
+body {
+  background-color: #2d3436;
+}
+
 .signin-container {
   width: 100%;
   height: 100vh;
   display: flex;
-  background-color: #2d3436;
 }
 
 .signin-form {
@@ -23,11 +26,12 @@
   flex-direction: column;
 }
 
-.singuptext{
+.singuptext {
   color: white;
 }
 
-.singuptext a, .signinforgotpass{
+.singuptext a,
+.signinforgotpass {
   color: #0abde3;
   text-decoration: none;
 }

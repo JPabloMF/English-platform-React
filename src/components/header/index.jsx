@@ -12,7 +12,10 @@ import SearchIcon from "@material-ui/icons/Search";
 
 const styles = (theme) => ({
   root: {
-    width: "100%"
+    width: "100%",
+    "& .MuiToolbar-root": {
+      background: "linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)"
+    }
   },
   grow: {
     flexGrow: 1
