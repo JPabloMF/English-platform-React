@@ -2,43 +2,33 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withFormik } from "formik";
 import * as Yup from "yup";
-import InputComponent from "../components/input";
-import ButtonComponent from "../components/button";
+import { Link } from "react-router-dom";
+
+// components
+import SignInForm from "./form";
 
 const SignIn = ({ values, errors, handleChange, handleSubmit }) => {
   return (
-    <form onSubmit={handleSubmit}>
-      <InputComponent
-        text="Email"
-        value={values.email}
-        error={errors.email}
-        name="email"
-        type="email"
-        onChange={handleChange}
-      />
-      <InputComponent
-        text="Password"
-        value={values.password}
-        error={errors.password}
-        name="password"
-        type="password"
-        onChange={handleChange}
-      />
-      <ButtonComponent
-        text="Sing In"
-        type="submit"
-        variant="contained"
-        color="primary"
-      />
-    </form>
+    <div className="signin-container">
+      <div className="signin-form">
+        <SignInForm
+          values={values}
+          errors={errors}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+        />
+        <p>
+          Don't have an account?<Link to="/Dashboard">Sign Up</Link>
+        </p>
+        <Link to="/Dashboard">Forgot your Password?</Link>
+        <Link to="/Platform">Provisional entry to platform</Link>
+      </div>
+      <div className="singin-right">
+        <p>ENGLISH PLATFORM</p>
+        <p>Improve your future</p>
+      </div>
+    </div>
   );
-};
-
-SignIn.defaultProps = {
-  disabled: false,
-  type: "button",
-  variant: "contained",
-  color: "primary"
 };
 
 SignIn.prototypes = {
