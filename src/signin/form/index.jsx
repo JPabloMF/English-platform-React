@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
 
 // components
@@ -14,6 +14,9 @@ const SignInForm = ({ values, errors, handleChange, handleSubmit }) => {
         error={errors.email}
         name="email"
         type="email"
+        primaryColor="#fff"
+        secundaryColor="#0abde3"
+        margin="10px 0"
         onChange={handleChange}
       />
       <InputComponent
@@ -22,13 +25,18 @@ const SignInForm = ({ values, errors, handleChange, handleSubmit }) => {
         error={errors.password}
         name="password"
         type="password"
+        primaryColor="#fff"
+        secundaryColor="#0abde3"
+        margin="10px 0 50px 0"
         onChange={handleChange}
       />
       <ButtonComponent
         text="Sing In"
         type="submit"
         variant="contained"
-        color="primary"
+        color="white"
+        bgcolor="gradientblue"
+        padding="10px"
       />
     </form>
   );

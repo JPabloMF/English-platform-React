@@ -17,10 +17,10 @@ const SignIn = ({ values, errors, handleChange, handleSubmit }) => {
           handleChange={handleChange}
           handleSubmit={handleSubmit}
         />
-        <p>
-          Don't have an account?<Link to="/Dashboard">Sign Up</Link>
+        <p className="singuptext">
+          Don't have an account? <Link to="/Dashboard">Sign Up</Link>
         </p>
-        <Link to="/Dashboard">Forgot your Password?</Link>
+        <Link to="/Dashboard" className="signinforgotpass">Forgot your Password?</Link>
         <Link to="/Platform">Provisional entry to platform</Link>
       </div>
       <div className="singin-right">

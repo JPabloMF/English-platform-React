@@ -19,7 +19,17 @@
 
 .signin-form form {
   display: flex;
+  width: 60%;
   flex-direction: column;
+}
+
+.singuptext{
+  color: white;
+}
+
+.singuptext a, .signinforgotpass{
+  color: #0abde3;
+  text-decoration: none;
 }
 
 .singin-right {
